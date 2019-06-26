@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+  <div ng-app="myApp" ng-controller="logicController">
+    <p>Player X: <input type="text" ng-model="player1"></p>
+
+    <p>Player O: <input type="text" ng-model="player2"></p>
+
+    <input ng-click="letsPlay()" type="button" value="Play" />
+    <br/>
+
+    <div ng-if="playable">
+      <input type="button" class='button' ng-click="addInput(1)" value="{{inputArr[0]}}" />
+      <input type="button" class='button' ng-click="addInput(2)" value="{{inputArr[1]}}" />
+      <input type="button" class='button' ng-click="addInput(3)" value="{{inputArr[2]}}" />
+      <br/>
+      <input type="button" class='button' ng-click="addInput(4)" value="{{inputArr[3]}}" />
+      <input type="button" class='button' ng-click="addInput(5)" value="{{inputArr[4]}}" />
+      <input type="button" class='button' ng-click="addInput(6)" value="{{inputArr[5]}}" />
+      <br/>
+      <input type="button" class='button' ng-click="addInput(7)" value="{{inputArr[6]}}" />
+      <input type="button" class='button' ng-click="addInput(8)" value="{{inputArr[7]}}" />
+      <input type="button" class='button' ng-click="addInput(9)" value="{{inputArr[8]}}" />
+
+    </div>
+
+  </div>
+
+  <script src="tickTackLogic.js"></script>
+</body>
+
+</html>
