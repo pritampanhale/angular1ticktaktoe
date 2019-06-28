@@ -16,18 +16,24 @@
     <input ng-click="letsPlay()" type="button" value="Play" />
     <br/>
 
-    <div ng-if="playable">
-      <input type="button" class='button' ng-click="addInput(1)" value="{{inputArr[0]}}" />
-      <input type="button" class='button' ng-click="addInput(2)" value="{{inputArr[1]}}" />
-      <input type="button" class='button' ng-click="addInput(3)" value="{{inputArr[2]}}" />
+    <div ng-if="playable" id="tick1">
+      <input type="button" class='button' ng-click="addInput($event,1)" value="{{inputArr[0]}}" />
+      <input type="button" class='button' ng-click="addInput($event,2)" value="{{inputArr[1]}}" />
+      <input type="button" class='button' ng-click="addInput($event,3)" value="{{inputArr[2]}}" />
       <br/>
-      <input type="button" class='button' ng-click="addInput(4)" value="{{inputArr[3]}}" />
-      <input type="button" class='button' ng-click="addInput(5)" value="{{inputArr[4]}}" />
-      <input type="button" class='button' ng-click="addInput(6)" value="{{inputArr[5]}}" />
+      <input type="button" class='button' ng-click="addInput($event,4)" value="{{inputArr[3]}}" />
+      <input type="button" class='button' ng-click="addInput($event,5)" value="{{inputArr[4]}}" />
+      <input type="button" class='button' ng-click="addInput($event,6)" value="{{inputArr[5]}}" />
       <br/>
-      <input type="button" class='button' ng-click="addInput(7)" value="{{inputArr[6]}}" />
-      <input type="button" class='button' ng-click="addInput(8)" value="{{inputArr[7]}}" />
-      <input type="button" class='button' ng-click="addInput(9)" value="{{inputArr[8]}}" />
+      <input type="button" class='button' ng-click="addInput($event,7)" value="{{inputArr[6]}}" />
+      <input type="button" class='button' ng-click="addInput($event,8)" value="{{inputArr[7]}}" />
+      <input type="button" class='button' ng-click="addInput($event,9)" value="{{inputArr[8]}}" />
+
+    </div>
+
+    <div ng-if="win">
+      <label>Game Over</label>
+      <button ng-click="resetGrid()">  Reset</button>
 
     </div>
 
